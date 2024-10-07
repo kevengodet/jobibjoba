@@ -21,28 +21,28 @@ if ($_GET['what'] ?? null && $_GET['where'] ?? null) {
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css">
-    <title>Jobijoba - Ad search engine</title>
+    <title>Jobijoba - Offres d'emploi</title>
 </head>
 <body>
     <header>
         <h1>Jobijoba</h1>
         <form action="index.php" method="get">
             <label>
-                What?
+                Quoi ?
                 <input type=text placeholder="Développeur, Plaquiste, ..." value="<?=$_GET['what'] ?? ''?>" name=what>
             </label>
             <label>
-                Where?
+                Où ?
                 <input type=text placeholder="Lyon, 38, Occitanie, ..." value="<?=$_GET['where'] ?? ''?>" name=where>
             </label>
-            <input type="submit" value="Search">
+            <input type="submit" value="Chercher">
         </form>
     </header>
     <?php if (!is_null($page)): ?>
     <?php if (count($page->jobs) === 0): ?>
-            <article><h2>No job found.</h2></article>
+            <article><h2>Aucune offre trouvée.</h2></article>
     <?php else:?>
-            <section><h3><?=count($page->jobs)?> jobs found.</h3></section>
+            <section><h3><?=$page->totalCount?> offres trouvées.</h3></section>
     <article>
         <?php foreach ($page->jobs as $job): ?>
         <section>
