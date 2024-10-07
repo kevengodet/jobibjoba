@@ -1,0 +1,28 @@
+{
+  "name": "keven/jobijoba-client",
+  "description": "Simple API client for JobiJoba API",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Keven\\JobiJoba\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "php-http/discovery": "^1.17",
+    "psr/http-client-implementation": "*",
+    "psr/http-factory-implementation": "*"
+  },
+  "require-dev": {
+    "psr/http-client": "^1.0",
+    "symfony/http-client": "^7.1",
+    "nyholm/psr7": "^1.8"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": false
+    },
+    "sort-packages": true
+  }
+}
