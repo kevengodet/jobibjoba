@@ -7,7 +7,7 @@ $ composer install keven/jobijoba
 ```
 
 You can view the client working locally by running the following command line
-with your own API credentials:
+with your own API credentials from the root of the package:
 
 ```shell
 $ JOBIJOBA_CLIENT_ID=xxx JOBIJOBA_CLIENT_SECRET=xxx php -S localhost:8080 ./demo
@@ -23,8 +23,8 @@ Then go to http://localhost:8080 in your browser.
 use Keven\JobiJoba\ApiClient;
 
 $jobijoba = new ApiClient($clientId, $clientSecret);
-$jobs = $jobijoba->search("chauffeur", "Amiens");
-foreach ($jobs as $job) {
+$page = $jobijoba->search("chauffeur", "Amiens");
+foreach ($page->jobs as $job) {
     echo $job->title;
     
     // Available properties:
