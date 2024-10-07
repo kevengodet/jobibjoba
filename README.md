@@ -1,9 +1,9 @@
-# keven/jobijoba - PHP client for JobiJoba API
+# keven/jobijoba-client - PHP client for JobiJoba API
 
 ## Installation
 
 ```shell
-$ composer install keven/jobijoba
+$ composer install keven/jobijoba-client
 ```
 
 You can view the client working locally by running the following command line
